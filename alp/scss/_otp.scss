@@ -1,0 +1,94 @@
+// Raqamli kod kiritish sahifasi uchun SCSS
+
+$primary-color: #000;
+$secondary-color: #666;
+$background-color: #f9f9f9;
+$button-color: #007bff;
+$disabled-color: #ccc;
+$border-radius: 8px;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.otp-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+
+    h2 {
+        font-size: 18px;
+        color: $primary-color;
+        margin-bottom: 10px;
+    }
+
+    .code-inputs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        input {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid $secondary-color;
+            border-radius: $border-radius;
+            outline: none;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: $button-color;
+            }
+        }
+    }
+
+    .resend-btn {
+        background: none;
+        border: none;
+        color: $disabled-color;
+        font-size: 14px;
+        cursor: not-allowed;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .back-btn, .next-btn {
+            width: 45%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: $border-radius;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-btn {
+            background: $disabled-color;
+            color: $primary-color;
+        }
+
+        .next-btn {
+            background: $button-color;
+            color: #fff;
+
+            &:disabled {
+                background: $disabled-color;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

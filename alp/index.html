@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script type="module" src="firebase-auth.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>What's your phone number or email?</h2>
+        <div class="input-group">
+            <select class="country-code">
+                <option value="+91">🇮🇳 +91</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+44">🇬🇧 +44</option>
+            </select>
+            <input type="text" placeholder="6363326210">
+        </div>
+        <button class="continue-btn">Continue</button>
+        <div class="divider">or</div>
+        <button id="google-signin" class="social-btn google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo">
+            Continue with Google
+        </button>
+        <button class="social-btn apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+            Continue with Apple
+        </button>
+        <button class="social-btn facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+            Continue with Facebook
+        </button>
+        <p class="terms">
+            By proceeding, you consent to get calls, WhatsApp, or SMS messages, including by automated means, from Uber and its affiliates to the number provided.
+        </p>
+        <p class="privacy">
+            This site is protected by reCAPTCHA and the Google 
+            <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+        </p>
+    </div>
+</body>
+</html>
